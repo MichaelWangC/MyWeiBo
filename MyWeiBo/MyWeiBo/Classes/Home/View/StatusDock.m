@@ -26,7 +26,7 @@
         
         UIButton *repost = [[UIButton alloc]init];
         [repost setTitle:@"转发" forState:UIControlStateNormal];
-        [repost setTitleColor:kColor(235, 235, 235) forState:UIControlStateNormal];
+        [repost setTitleColor:kColor(220, 220, 220) forState:UIControlStateNormal];
         repost.titleLabel.font = kTextFont;
         [repost setImage:[UIImage imageNamed:@"timeline_icon_retweet"] forState:UIControlStateNormal];
         CGFloat btnW = [UIScreen mainScreen].bounds.size.width / 3;

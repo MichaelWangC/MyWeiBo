@@ -27,7 +27,6 @@
         _repost = [self addButtonWithTitle:@"转发" imageName:@"timeline_icon_retweet" index:0];
         _comment = [self addButtonWithTitle:@"评论" imageName:@"timeline_icon_comment" index:1];
         _attitute = [self addButtonWithTitle:@"赞" imageName:@"timeline_icon_unlike" index:2];
-        
     }
     return self;
 }
@@ -38,12 +37,24 @@
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:kColor(100, 100, 100) forState:UIControlStateNormal];
     btn.titleLabel.font = kTextFont;
+    //设置文字距离左边图片的距离
     btn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+    //取消点击阴影
+    btn.adjustsImageWhenHighlighted = NO;
     [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [btn setBackgroundImage:[UIImage imageNamed:@"timeline_card_middlebottom_highlighted"] forState:UIControlStateHighlighted];
     CGFloat btnW = [UIScreen mainScreen].bounds.size.width / 3;
     btn.frame = (CGRect){{btnW * index,0},{btnW,kStatusDockHeight}};
     [self addSubview:btn];
 
+    //添加分割线
+    if (index) {
+        UIImage *lineImage = [UIImage imageNamed:@"timeline_card_bottom_line"];
+        UIImageView *line = [[UIImageView alloc]initWithImage:lineImage];
+        line.center = CGPointMake(btnW * index, kStatusDockHeight * 0.5);
+        [self addSubview:line];
+    }
+    
     return btn;
 }
 

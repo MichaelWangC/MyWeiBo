@@ -60,8 +60,10 @@
         UIImageView *image = [[UIImageView alloc]init];
         CGFloat imageX = kImageListPadding * (column + 1) + column * kImageW;
         CGFloat imageY = kImageListPadding * (row + 1) + row * kImageH;
+        //减掉超出边界的部分
+        image.clipsToBounds = YES;
+        image.contentMode = UIViewContentModeScaleAspectFill;
         image.frame = (CGRect){{imageX,imageY},{kImageW,kImageH}};
-        image.contentMode = UIViewContentModeScaleToFill;
         [HttpTool loadImageWithUrl:picUrls[i][@"thumbnail_pic"] place:_placeImage imageView:image];
         [self addSubview:image];
     }

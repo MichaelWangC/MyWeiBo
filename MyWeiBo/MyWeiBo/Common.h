@@ -61,7 +61,7 @@
 #define kImageH 80
 //配图大小（单图）
 #define kSingleImageW 100
-#define kSingleImageH 150
+#define kSingleImageH 120
 //配图间隔
 #define kImageListPadding 5
 

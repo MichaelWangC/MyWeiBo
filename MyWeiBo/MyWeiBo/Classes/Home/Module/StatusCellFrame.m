@@ -92,13 +92,13 @@
     
     //微博底部dock
     CGFloat dockX = 0;
-    CGFloat dockY;
+    CGFloat dockY = kCellPaddingWidth;
     if (status.picUrls.count) {
-        dockY = CGRectGetMaxY(_picFrame);
+        dockY += CGRectGetMaxY(_picFrame);
     } else if (status.retweetedStatus) {
-        dockY = CGRectGetMaxY(_retweetedFrame);
+        dockY += CGRectGetMaxY(_retweetedFrame);
     } else {
-        dockY = CGRectGetMaxY(_textFrame);
+        dockY += CGRectGetMaxY(_textFrame);
     }
     _statusDockFrame = (CGRect){{dockX,dockY},{cellWidth,kStatusDockHeight}};
     

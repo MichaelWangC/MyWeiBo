@@ -28,7 +28,7 @@
 
     //添加控制器
     [self addViewController];
-    self.selectedIndex = 2;
+    self.selecteIndexToController = 2;
 }
 
 #pragma mark 添加控制器

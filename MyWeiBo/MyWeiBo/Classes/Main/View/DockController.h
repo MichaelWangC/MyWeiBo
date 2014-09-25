@@ -12,6 +12,7 @@
 @interface DockController : UIViewController
 
 @property (strong , nonatomic) Dock *dock;
-@property (nonatomic) NSInteger selectedIndex;
+@property (nonatomic ,assign,readonly) NSInteger selectedIndex;
+@property (nonatomic ,assign) NSInteger selecteIndexToController;
 
 @end

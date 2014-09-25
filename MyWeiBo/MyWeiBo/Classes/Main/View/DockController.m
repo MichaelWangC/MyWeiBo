@@ -37,15 +37,15 @@
     UIViewController *new = self.childViewControllers[to];
     new.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - kDockHeight);
     [self.view addSubview:new.view];
-    
+    _selectedIndex = to;
 }
 
--(void)setSelectedIndex:(NSInteger)selectedIndex{
+-(void)setSelecteIndexToController:(NSInteger)selecteIndexToController{
     
-    if (selectedIndex < 0 || selectedIndex > self.childViewControllers.count) return;
+    if (selecteIndexToController < 0 || selecteIndexToController > self.childViewControllers.count) return;
     
-    [_dock selectedClickWithselectedIndex:selectedIndex];
-    _selectedIndex = selectedIndex;
+    [_dock selectedClickWithselectedIndex:selecteIndexToController];
+    _selectedIndex = selecteIndexToController;
 }
 
 @end

@@ -13,6 +13,7 @@
 -(id)initWithDict:(NSDictionary *)dict{
     
     if (self = [super init]) {
+        _ID = [dict[@"id"] longLongValue];
         _text = dict[@"text"];
         [self setCreateAt:dict[@"created_at"]];
         _picUrls = dict[@"pic_urls"];

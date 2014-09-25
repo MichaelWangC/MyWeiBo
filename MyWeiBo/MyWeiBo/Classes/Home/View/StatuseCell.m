@@ -141,7 +141,7 @@
         _retweetedView.backgroundColor = kRetweetedBg;
         
         _retweetedScreenName.frame = cellFrame.retweetedScreenNameFrame;
-        _retweetedScreenName.text = [NSString stringWithFormat:@"%@",statuse.retweetedStatus.user.screenName];
+        _retweetedScreenName.text = [NSString stringWithFormat:@"@%@",statuse.retweetedStatus.user.screenName];
         _retweetedScreenName.textColor = kRetweetedScreenNameColor;
         
         _retweetedText.frame = cellFrame.retweetedTextFrame;

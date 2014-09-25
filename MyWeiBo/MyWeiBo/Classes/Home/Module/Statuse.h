@@ -11,6 +11,7 @@
 
 @interface Statuse : NSObject
 
+@property (nonatomic,assign) long long ID;
 @property (nonatomic,copy) NSString *text;
 @property (nonatomic,copy) NSString *createAt;
 @property (nonatomic,strong) NSArray *picUrls;

@@ -58,6 +58,7 @@
 		6663B6B919C1612A001256DA /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6663B6B819C1612A001256DA /* HomeController.m */; };
 		6663B6BD19C163EA001256DA /* Statuse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6663B6BC19C163EA001256DA /* Statuse.m */; };
 		6663B6C019C163FC001256DA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6663B6BF19C163FC001256DA /* User.m */; };
+		66A2FB0B19D3F386006FDF52 /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A2FB0A19D3F386006FDF52 /* DetailController.m */; };
 		66A5ADA019AF237200BCAC34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A5AD9F19AF237200BCAC34 /* Foundation.framework */; };
 		66A5ADA219AF237200BCAC34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A5ADA119AF237200BCAC34 /* CoreGraphics.framework */; };
 		66A5ADA419AF237200BCAC34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A5ADA319AF237200BCAC34 /* UIKit.framework */; };
@@ -432,6 +433,8 @@
 		6663B6BC19C163EA001256DA /* Statuse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Statuse.m; sourceTree = "<group>"; };
 		6663B6BE19C163FC001256DA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		6663B6BF19C163FC001256DA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		66A2FB0919D3F386006FDF52 /* DetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailController.h; path = MyWeiBo/Classes/DetailStatus/Controller/DetailController.h; sourceTree = SOURCE_ROOT; };
+		66A2FB0A19D3F386006FDF52 /* DetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailController.m; path = MyWeiBo/Classes/DetailStatus/Controller/DetailController.m; sourceTree = SOURCE_ROOT; };
 		66A5AD9C19AF237200BCAC34 /* MyWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A5AD9F19AF237200BCAC34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		66A5ADA119AF237200BCAC34 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -916,6 +919,40 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		66A2FAFF19D3F2DC006FDF52 /* DetailStatus */ = {
+			isa = PBXGroup;
+			children = (
+				66A2FB0119D3F2DC006FDF52 /* Module */,
+				66A2FB0219D3F2DC006FDF52 /* View */,
+				66A2FB0019D3F2DC006FDF52 /* Controller */,
+			);
+			name = DetailStatus;
+			path = OAuth/DetailStatus;
+			sourceTree = "<group>";
+		};
+		66A2FB0019D3F2DC006FDF52 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				66A2FB0919D3F386006FDF52 /* DetailController.h */,
+				66A2FB0A19D3F386006FDF52 /* DetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		66A2FB0119D3F2DC006FDF52 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		66A2FB0219D3F2DC006FDF52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		66A5AD9319AF237200BCAC34 = {
 			isa = PBXGroup;
 			children = (
@@ -992,6 +1029,7 @@
 		66A5ADCE19AF25E200BCAC34 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				66A2FAFF19D3F2DC006FDF52 /* DetailStatus */,
 				66193E4D19C0254E00AEE357 /* OAuth */,
 				66F37FE919B15E950059E194 /* More */,
 				66F37FE319B15E950059E194 /* Discover */,
@@ -1869,6 +1907,7 @@
 				6663B6B619C13FC0001256DA /* UIImage+MWB.m in Sources */,
 				66193E7219C03B5700AEE357 /* AFNetworkReachabilityManager.m in Sources */,
 				66193E7719C03B5700AEE357 /* AFURLSessionManager.m in Sources */,
+				66A2FB0B19D3F386006FDF52 /* DetailController.m in Sources */,
 				6639B0B119C190E3001DFB56 /* UIImage+GIF.m in Sources */,
 				663ECBA919C958900044FA87 /* ImageListView.m in Sources */,
 				6639B0B519C190E3001DFB56 /* UIImageView+WebCache.m in Sources */,

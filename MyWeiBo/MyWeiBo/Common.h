@@ -18,6 +18,8 @@
 #define KRevokeOauthUrl [KBaseUrl stringByAppendingPathComponent:@"oauth2/revokeoauth2"]
 #define KStatusesUrl [KBaseUrl stringByAppendingPathComponent:@"2/statuses/friends_timeline.json"]
 
+#define kDockHeight 44
+
 // 头像
 #define kIconSmallW 34
 #define kIconSmallH 34

@@ -14,8 +14,9 @@
 #import "MeController.h"
 #import "MoreController.h"
 #import "MWBNavigationController.h"
+#import "UIBarButtonItem+MWB.h"
 
-@interface MainController ()
+@interface MainController ()<UINavigationControllerDelegate>
 
 @end
 
@@ -36,6 +37,7 @@
     HomeController *home = [[HomeController alloc]initWithStyle:UITableViewStylePlain];
     MWBNavigationController *nv = [[MWBNavigationController alloc]initWithRootViewController:home];
     [self addChildViewController:nv];
+    nv.delegate = self;
     [self.dock addItemWithIcon:@"tabbar_home" selectedIcon:@"tabbar_home_selected" title:@"首页"];
     
     MessageController *msg = [[MessageController alloc]init];
@@ -57,6 +59,53 @@
     MWBNavigationController *nv4 = [[MWBNavigationController alloc]initWithRootViewController:more];
     [self addChildViewController:nv4];
     [self.dock addItemWithIcon:@"tabbar_more" selectedIcon:@"tabbar_more_selected" title:@"更多"];
+}
+
+-(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    //获取根控制器
+    UIViewController *root = navigationController.viewControllers[0];
+    if (viewController != root){
+        
+        CGRect frame = navigationController.view.frame;
+        frame.size.height = self.view.frame.size.height;
+        navigationController.view.frame = frame;
+        //调整Dock位置
+        CGRect dockFrame = self.dock.frame;
+        dockFrame.origin.y = root.view.frame.size.height - kDockHeight;
+        if ([root.view isKindOfClass:[UIScrollView class]]) {
+            UIScrollView *scrollView = (UIScrollView *)root.view;
+            dockFrame.origin.y += scrollView.contentOffset.y;
+        }
+        self.dock.frame = dockFrame;
+        [self.dock removeFromSuperview];
+        [root.view addSubview:self.dock];
+        
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithIcon:@"navigationbar_back" highlightedIcon:@"navigationbar_back_highlighted" target:self action:@selector(backView)];
+        
+    }
+}
+
+-(void)backView{
+    [self.childViewControllers[self.selectedIndex] popViewControllerAnimated:YES];
+}
+
+
+-(void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    //获取根控制器
+    UIViewController *root = navigationController.viewControllers[0];
+    if (viewController == root){
+        
+        CGRect frame = navigationController.view.frame;
+        frame.size.height = self.view.frame.size.height - kDockHeight;
+        navigationController.view.frame = frame;
+        
+        CGRect dockFrame = self.dock.frame;
+        dockFrame.origin.y = self.view.frame.size.height - kDockHeight;
+        self.dock.frame = dockFrame;
+        [self.dock removeFromSuperview];
+        [self.view addSubview:self.dock];
+        
+    }
 }
 
 @end

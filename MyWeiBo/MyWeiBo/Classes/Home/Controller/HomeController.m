@@ -15,6 +15,7 @@
 #import "StatuseCell.h"
 #import "StatusCellFrame.h"
 #import "MJRefresh.h"
+#import "DetailController.h"
 
 #define kShowBtnHeight 44
 
@@ -95,11 +96,11 @@
     //添加到navigationBar之下
     [self.navigationController.view insertSubview:showBtn belowSubview:self.navigationController.navigationBar];
     
-    [UIView animateWithDuration:1.5f animations:^{
+    [UIView animateWithDuration:1.0f animations:^{
 //        CGRect frame = showBtn.frame;
 //        frame.origin.y += kShowBtnHeight;
 //        showBtn.frame = frame;
-        showBtn.transform = CGAffineTransformMakeTranslation(0, kShowBtnHeight + 5);
+        showBtn.transform = CGAffineTransformMakeTranslation(0, kShowBtnHeight + 1);
     } completion:^(BOOL finished) {
         //隐藏
         [NSThread sleepForTimeInterval:0.5];
@@ -210,6 +211,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    DetailController *detail = [[DetailController alloc]init];
+    StatusCellFrame *frame = _statusesFrames[indexPath.row];
+    detail.status = frame.statuse;
+    [self.navigationController pushViewController:detail animated:YES];
+    
 }
 
 @end

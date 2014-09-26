@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class Statuse;
+@class StatusCellFrame;
 @interface DetailController : UITableViewController
 
-@property (nonatomic,strong) Statuse *status;
+@property (nonatomic,strong) StatusCellFrame *statusCellFrame;
 
 @end

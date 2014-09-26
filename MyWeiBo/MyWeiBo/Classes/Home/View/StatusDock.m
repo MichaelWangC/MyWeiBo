@@ -7,6 +7,7 @@
 //
 
 #import "StatusDock.h"
+#import "Statuse.h"
 
 @interface StatusDock (){
     UIButton *_repost;
@@ -56,6 +57,26 @@
     }
     
     return btn;
+}
+
+-(void)setStatus:(Statuse *)status{
+    [self setNumberWithBtn:_repost count:status.repostsCount];
+    [self setNumberWithBtn:_comment count:status.commentsCount];
+    [self setNumberWithBtn:_attitute count:status.attitudesCount];
+}
+
+-(void)setNumberWithBtn:(UIButton *)btn count:(NSInteger)count{
+    if (count == 0) return;
+    NSString *title;
+    if (count < 10000) {
+        title = [NSString stringWithFormat:@"%d",count];
+    }else{
+        title = [NSString stringWithFormat:@"%.1f万",count / 10000.0];
+        //字符串替换
+        title = [title stringByReplacingOccurrencesOfString:@".0" withString:@""];
+    }
+    
+    [btn setTitle:title forState:UIControlStateNormal];
 }
 
 @end

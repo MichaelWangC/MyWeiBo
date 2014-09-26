@@ -40,6 +40,9 @@
 #define kRetweetedTextFont [UIFont systemFontOfSize:13]
 #define kRetweetedScreenNameFont [UIFont systemFontOfSize:13]
 
+//微博正文 section头部高度
+#define kDetailHeaderHeight 40
+
 //表单间隔
 #define kTableBorderWidth 8
 #define kCellMargin 10
@@ -62,7 +65,7 @@
 #define kImageW 80
 #define kImageH 80
 //配图大小（单图）
-#define kSingleImageW 100
+#define kSingleImageW 120
 #define kSingleImageH 120
 //配图间隔
 #define kImageListPadding 5

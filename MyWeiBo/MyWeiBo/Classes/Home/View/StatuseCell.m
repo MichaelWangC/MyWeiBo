@@ -38,6 +38,7 @@
         [self addStatuseView];
         //添加转发微博内容
         [self addRewteetedView];
+        self.contentView.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -143,9 +144,11 @@
         _retweetedScreenName.frame = cellFrame.retweetedScreenNameFrame;
         _retweetedScreenName.text = [NSString stringWithFormat:@"@%@",statuse.retweetedStatus.user.screenName];
         _retweetedScreenName.textColor = kRetweetedScreenNameColor;
+        _retweetedScreenName.backgroundColor = [UIColor clearColor];
         
         _retweetedText.frame = cellFrame.retweetedTextFrame;
         _retweetedText.text = statuse.retweetedStatus.text;
+        _retweetedText.backgroundColor = [UIColor clearColor];
         
         if (statuse.retweetedStatus.picUrls.count) {
             _retweetedPics.hidden = NO;
@@ -160,7 +163,7 @@
     
     //statusDock
     _statusDock.frame = cellFrame.statusDockFrame;
-
+    _statusDock.status = statuse;
 }
 
 @end

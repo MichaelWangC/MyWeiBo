@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class Statuse;
 @interface StatusDock : UIView
+
+@property (nonatomic ,strong) Statuse *status;
 
 @end

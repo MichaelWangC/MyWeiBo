@@ -23,6 +23,11 @@
         }
         
         _user = [[User alloc]initWithDict:dict[@"user"]];
+        
+        _repostsCount = [dict[@"reposts_count"] integerValue];
+        _commentsCount = [dict[@"comments_count"] integerValue];
+        _attitudesCount = [dict[@"attitudes_count"] integerValue];
+        
     }
     return self;
 }

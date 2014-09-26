@@ -23,6 +23,7 @@
 		66193E7B19C0432B00AEE357 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 66193E7A19C0432B00AEE357 /* HttpTool.m */; };
 		66193E7E19C050FF00AEE357 /* AccessTokenTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 66193E7D19C050FF00AEE357 /* AccessTokenTool.m */; };
 		66193E8219C0516A00AEE357 /* AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 66193E8119C0516A00AEE357 /* AccessToken.m */; };
+		6621A8C619D5127B000B08D0 /* DetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6621A8C519D5127B000B08D0 /* DetailHeader.m */; };
 		66220DCC19B05B4C00B80A9B /* Dock.m in Sources */ = {isa = PBXBuildFile; fileRef = 66220DCB19B05B4C00B80A9B /* Dock.m */; };
 		66220DD419B06A6E00B80A9B /* DockItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 66220DD319B06A6E00B80A9B /* DockItem.m */; };
 		66232FA819C7D39A007E09ED /* IconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66232FA719C7D39A007E09ED /* IconView.m */; };
@@ -361,6 +362,8 @@
 		66193E7D19C050FF00AEE357 /* AccessTokenTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessTokenTool.m; sourceTree = "<group>"; };
 		66193E8019C0516A00AEE357 /* AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessToken.h; sourceTree = "<group>"; };
 		66193E8119C0516A00AEE357 /* AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessToken.m; sourceTree = "<group>"; };
+		6621A8C419D5127B000B08D0 /* DetailHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailHeader.h; sourceTree = "<group>"; };
+		6621A8C519D5127B000B08D0 /* DetailHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailHeader.m; sourceTree = "<group>"; };
 		66220DC719B018C200B80A9B /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		66220DCA19B05B4C00B80A9B /* Dock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dock.h; sourceTree = "<group>"; };
 		66220DCB19B05B4C00B80A9B /* Dock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dock.m; sourceTree = "<group>"; };
@@ -949,6 +952,8 @@
 		66A2FB0219D3F2DC006FDF52 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6621A8C419D5127B000B08D0 /* DetailHeader.h */,
+				6621A8C519D5127B000B08D0 /* DetailHeader.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1918,6 +1923,7 @@
 				66193E5219C0258700AEE357 /* OAuthController.m in Sources */,
 				66193E7E19C050FF00AEE357 /* AccessTokenTool.m in Sources */,
 				66193E7419C03B5700AEE357 /* AFURLConnectionOperation.m in Sources */,
+				6621A8C619D5127B000B08D0 /* DetailHeader.m in Sources */,
 				6639B0AD19C190E3001DFB56 /* SDWebImageDownloaderOperation.m in Sources */,
 				66193E7619C03B5700AEE357 /* AFURLResponseSerialization.m in Sources */,
 				660821BB19B55CD500B0CA7C /* MoreController.m in Sources */,

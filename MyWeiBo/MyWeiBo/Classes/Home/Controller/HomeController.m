@@ -197,7 +197,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIden = @"cell";
+    static NSString *cellIden = @"statusCell";
     StatuseCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIden];
     if (cell == nil) {
         cell = [[StatuseCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIden];
@@ -214,7 +214,7 @@
     
     DetailController *detail = [[DetailController alloc]init];
     StatusCellFrame *frame = _statusesFrames[indexPath.row];
-    detail.status = frame.statuse;
+    detail.statusCellFrame = frame;
     [self.navigationController pushViewController:detail animated:YES];
     
 }

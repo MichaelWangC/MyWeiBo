@@ -17,6 +17,9 @@
 @property (nonatomic,strong) NSArray *picUrls;
 @property (nonatomic,strong) Statuse *retweetedStatus;
 @property (nonatomic,strong) User *user;
+@property (nonatomic,assign) NSInteger repostsCount;
+@property (nonatomic,assign) NSInteger commentsCount;
+@property (nonatomic,assign) NSInteger attitudesCount;
 
 -(id)initWithDict:(NSDictionary *)dict;
 

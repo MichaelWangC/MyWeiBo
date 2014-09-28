@@ -41,7 +41,10 @@
 #define kRetweetedScreenNameFont [UIFont systemFontOfSize:13]
 
 //微博正文 section头部高度
-#define kDetailHeaderHeight 40
+#define kDetailHeaderHeight 45
+#define kDetailHeaderTextFont [UIFont systemFontOfSize:15]
+#define kDetailHeaderColor kColor(93, 93, 93)
+#define kDetailHeaderSelectedColor kColor(30, 30, 30)
 
 //表单间隔
 #define kTableBorderWidth 8

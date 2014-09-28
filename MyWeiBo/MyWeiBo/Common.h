@@ -52,14 +52,14 @@
 // 会员昵称颜色
 #define kMBScreenNameColor kColor(243, 101, 18)
 // 非会员昵称颜色
-#define kScreenNameColor kColor(93, 93, 93);
+#define kScreenNameColor kColor(93, 93, 93)
 // 被转发微博昵称颜色
 #define kRetweetedScreenNameColor kColor(63, 104, 161)
 
 // 全局的背景色
 #define kGlobalBg kColor(235, 235, 235)
 // 转发背景色
-#define kRetweetedBg kColor(240, 240, 240);
+#define kRetweetedBg kColor(240, 240, 240)
 
 //配图大小（多图）
 #define kImageW 80

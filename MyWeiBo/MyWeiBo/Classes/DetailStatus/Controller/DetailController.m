@@ -53,6 +53,7 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if (section == 0) return nil;
     DetailHeader *detailHeader = [[DetailHeader alloc]init];
+    detailHeader.status = _statusCellFrame.statuse;
     return detailHeader;
 }
 

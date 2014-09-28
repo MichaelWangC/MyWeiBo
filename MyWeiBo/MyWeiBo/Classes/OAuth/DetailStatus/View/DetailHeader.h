@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Statuse;
 @interface DetailHeader : UIView
+
+@property (nonatomic,strong) Statuse *status;
 
 +(CGFloat)DetailHeaderHeight;
 

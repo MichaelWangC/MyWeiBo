@@ -214,7 +214,7 @@
     
     DetailController *detail = [[DetailController alloc]init];
     StatusCellFrame *frame = _statusesFrames[indexPath.row];
-    detail.statusCellFrame = frame;
+    detail.status = frame.statuse;
     [self.navigationController pushViewController:detail animated:YES];
     
 }

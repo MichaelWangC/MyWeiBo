@@ -7,11 +7,13 @@
 //
 
 #import "DetailController.h"
-#import "StatusCellFrame.h"
-#import "StatuseCell.h"
+#import "DetailStatusCellFrame.h"
+#import "DetailStatusCell.h"
 #import "DetailHeader.h"
 
-@interface DetailController ()
+@interface DetailController (){
+    DetailStatusCellFrame *_statusCellFrame;
+}
 
 @end
 
@@ -24,6 +26,9 @@
     self.tableView.backgroundColor = kGlobalBg;
 //    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
+    
+    _statusCellFrame = [[DetailStatusCellFrame alloc]init];
+    _statusCellFrame.statuse = _status;
 }
 
 #pragma mark - Table view data source
@@ -61,9 +66,9 @@
 {
     if (indexPath.section == 0) {
         static NSString *cellIden = @"DetailStatusCell";
-        StatuseCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIden];
+        DetailStatusCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIden];
         if (cell == nil) {
-            cell = [[StatuseCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIden];
+            cell = [[DetailStatusCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIden];
         }
         cell.cellFrame = _statusCellFrame;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;

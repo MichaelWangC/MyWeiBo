@@ -55,6 +55,10 @@
 		663C211719C9808900AC26BF /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 663C210E19C9808900AC26BF /* UIScrollView+MJRefresh.m */; };
 		663C211819C9808900AC26BF /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 663C211019C9808900AC26BF /* UIView+MJExtension.m */; };
 		663ECBA919C958900044FA87 /* ImageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 663ECBA819C958900044FA87 /* ImageListView.m */; };
+		6644401119D8EE9B003179C1 /* BaseStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6644401019D8EE9B003179C1 /* BaseStatusCell.m */; };
+		6644401419D8EED2003179C1 /* BaseCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6644401319D8EED2003179C1 /* BaseCellFrame.m */; };
+		6644401719D8F781003179C1 /* DetailStatusCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6644401619D8F781003179C1 /* DetailStatusCellFrame.m */; };
+		6644401A19D8F7A7003179C1 /* DetailStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6644401919D8F7A7003179C1 /* DetailStatusCell.m */; };
 		6663B6B619C13FC0001256DA /* UIImage+MWB.m in Sources */ = {isa = PBXBuildFile; fileRef = 6663B6B519C13FC0001256DA /* UIImage+MWB.m */; };
 		6663B6B919C1612A001256DA /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6663B6B819C1612A001256DA /* HomeController.m */; };
 		6663B6BD19C163EA001256DA /* Statuse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6663B6BC19C163EA001256DA /* Statuse.m */; };
@@ -428,6 +432,14 @@
 		663C211019C9808900AC26BF /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		663ECBA719C958900044FA87 /* ImageListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageListView.h; sourceTree = "<group>"; };
 		663ECBA819C958900044FA87 /* ImageListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageListView.m; sourceTree = "<group>"; };
+		6644400F19D8EE9B003179C1 /* BaseStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStatusCell.h; sourceTree = "<group>"; };
+		6644401019D8EE9B003179C1 /* BaseStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStatusCell.m; sourceTree = "<group>"; };
+		6644401219D8EED2003179C1 /* BaseCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCellFrame.h; sourceTree = "<group>"; };
+		6644401319D8EED2003179C1 /* BaseCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCellFrame.m; sourceTree = "<group>"; };
+		6644401519D8F781003179C1 /* DetailStatusCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailStatusCellFrame.h; sourceTree = "<group>"; };
+		6644401619D8F781003179C1 /* DetailStatusCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailStatusCellFrame.m; sourceTree = "<group>"; };
+		6644401819D8F7A7003179C1 /* DetailStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailStatusCell.h; sourceTree = "<group>"; };
+		6644401919D8F7A7003179C1 /* DetailStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailStatusCell.m; sourceTree = "<group>"; };
 		6663B6B419C13FC0001256DA /* UIImage+MWB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MWB.h"; sourceTree = "<group>"; };
 		6663B6B519C13FC0001256DA /* UIImage+MWB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MWB.m"; sourceTree = "<group>"; };
 		6663B6B719C1612A001256DA /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
@@ -909,6 +921,33 @@
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
+		6644400C19D8ED3E003179C1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6644400D19D8ED3E003179C1 /* Module */,
+				6644400E19D8ED3E003179C1 /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6644400D19D8ED3E003179C1 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				6644401219D8EED2003179C1 /* BaseCellFrame.h */,
+				6644401319D8EED2003179C1 /* BaseCellFrame.m */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		6644400E19D8ED3E003179C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6644400F19D8EE9B003179C1 /* BaseStatusCell.h */,
+				6644401019D8EE9B003179C1 /* BaseStatusCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6663B6BA19C163C9001256DA /* Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -945,6 +984,8 @@
 		66A2FB0119D3F2DC006FDF52 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				6644401519D8F781003179C1 /* DetailStatusCellFrame.h */,
+				6644401619D8F781003179C1 /* DetailStatusCellFrame.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -954,6 +995,8 @@
 			children = (
 				6621A8C419D5127B000B08D0 /* DetailHeader.h */,
 				6621A8C519D5127B000B08D0 /* DetailHeader.m */,
+				6644401819D8F7A7003179C1 /* DetailStatusCell.h */,
+				6644401919D8F7A7003179C1 /* DetailStatusCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1034,12 +1077,12 @@
 		66A5ADCE19AF25E200BCAC34 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				66A2FAFF19D3F2DC006FDF52 /* DetailStatus */,
 				66193E4D19C0254E00AEE357 /* OAuth */,
 				66F37FE919B15E950059E194 /* More */,
 				66F37FE319B15E950059E194 /* Discover */,
 				66F37FE519B15E950059E194 /* Me */,
 				66F37FE719B15E950059E194 /* Message */,
+				66A2FAFF19D3F2DC006FDF52 /* DetailStatus */,
 				66220DCD19B0642200B80A9B /* Home */,
 				66A5ADCF19AF25E200BCAC34 /* Main */,
 				66A5ADD219AF25E200BCAC34 /* NewFeature */,
@@ -1515,6 +1558,7 @@
 		66F37FF919B19C090059E194 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				6644400C19D8ED3E003179C1 /* Base */,
 				66193E7819C0432B00AEE357 /* HttpTool */,
 				66F37FFA19B19C090059E194 /* Category */,
 				66F37FFB19B19C090059E194 /* Lib */,
@@ -1910,6 +1954,8 @@
 				66F37FFE19B19C2F0059E194 /* UIBarButtonItem+MWB.m in Sources */,
 				663C211619C9808900AC26BF /* UIScrollView+MJExtension.m in Sources */,
 				6663B6B619C13FC0001256DA /* UIImage+MWB.m in Sources */,
+				6644401119D8EE9B003179C1 /* BaseStatusCell.m in Sources */,
+				6644401A19D8F7A7003179C1 /* DetailStatusCell.m in Sources */,
 				66193E7219C03B5700AEE357 /* AFNetworkReachabilityManager.m in Sources */,
 				66193E7719C03B5700AEE357 /* AFURLSessionManager.m in Sources */,
 				66A2FB0B19D3F386006FDF52 /* DetailController.m in Sources */,
@@ -1931,9 +1977,11 @@
 				6639B0A819C190E3001DFB56 /* NSData+ImageContentType.m in Sources */,
 				66193E7519C03B5700AEE357 /* AFURLRequestSerialization.m in Sources */,
 				660DFBBD19B44AD700B8B48E /* MWBNavigationController.m in Sources */,
+				6644401719D8F781003179C1 /* DetailStatusCellFrame.m in Sources */,
 				66F37FF019B15F4C0059E194 /* MessageController.m in Sources */,
 				6639B0B019C190E3001DFB56 /* UIButton+WebCache.m in Sources */,
 				663C211719C9808900AC26BF /* UIScrollView+MJRefresh.m in Sources */,
+				6644401419D8EED2003179C1 /* BaseCellFrame.m in Sources */,
 				66A5ADB019AF237200BCAC34 /* MWBAppDelegate.m in Sources */,
 				66A5AFC119AF26B700BCAC34 /* NewFeatureController.m in Sources */,
 				66193E7019C03B5700AEE357 /* AFHTTPRequestOperationManager.m in Sources */,

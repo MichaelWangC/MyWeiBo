@@ -7,6 +7,7 @@
 //
 
 #import "Statuse.h"
+#import "User.h"
 
 @implementation Statuse
 

@@ -315,6 +315,11 @@
 		66A5AFBA19AF25E300BCAC34 /* toolbar_button_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A5AECC19AF25E300BCAC34 /* toolbar_button_highlighted@2x.png */; };
 		66A5AFBD19AF264600BCAC34 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A5AFBC19AF264600BCAC34 /* MainController.m */; };
 		66A5AFC119AF26B700BCAC34 /* NewFeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A5AFC019AF26B700BCAC34 /* NewFeatureController.m */; };
+		66AA2B7D19E524EF009CE1AE /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AA2B7C19E524EF009CE1AE /* Comment.m */; };
+		66AA2B8019E52FCD009CE1AE /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AA2B7F19E52FCD009CE1AE /* CommentCell.m */; };
+		66AA2B8319E52FE2009CE1AE /* RepostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AA2B8219E52FE2009CE1AE /* RepostCell.m */; };
+		66AA2B8619E531CE009CE1AE /* CommentCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AA2B8519E531CE009CE1AE /* CommentCellFrame.m */; };
+		66AA2B8919E531EF009CE1AE /* RepostCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AA2B8819E531EF009CE1AE /* RepostCellFrame.m */; };
 		66E516B219B46FFB0059A49B /* DockController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E516B119B46FFB0059A49B /* DockController.m */; };
 		66F37FF019B15F4C0059E194 /* MessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F37FEF19B15F4C0059E194 /* MessageController.m */; };
 		66F37FF319B15F770059E194 /* MeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F37FF219B15F770059E194 /* MeController.m */; };
@@ -707,6 +712,16 @@
 		66A5AFBC19AF264600BCAC34 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		66A5AFBF19AF26B700BCAC34 /* NewFeatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFeatureController.h; sourceTree = "<group>"; };
 		66A5AFC019AF26B700BCAC34 /* NewFeatureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFeatureController.m; sourceTree = "<group>"; };
+		66AA2B7B19E524EF009CE1AE /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		66AA2B7C19E524EF009CE1AE /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		66AA2B7E19E52FCD009CE1AE /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		66AA2B7F19E52FCD009CE1AE /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		66AA2B8119E52FE2009CE1AE /* RepostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepostCell.h; sourceTree = "<group>"; };
+		66AA2B8219E52FE2009CE1AE /* RepostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepostCell.m; sourceTree = "<group>"; };
+		66AA2B8419E531CE009CE1AE /* CommentCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCellFrame.h; sourceTree = "<group>"; };
+		66AA2B8519E531CE009CE1AE /* CommentCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCellFrame.m; sourceTree = "<group>"; };
+		66AA2B8719E531EF009CE1AE /* RepostCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepostCellFrame.h; sourceTree = "<group>"; };
+		66AA2B8819E531EF009CE1AE /* RepostCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepostCellFrame.m; sourceTree = "<group>"; };
 		66E516B019B46FFB0059A49B /* DockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DockController.h; sourceTree = "<group>"; };
 		66E516B119B46FFB0059A49B /* DockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DockController.m; sourceTree = "<group>"; };
 		66F37FEE19B15F4C0059E194 /* MessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageController.h; sourceTree = "<group>"; };
@@ -986,6 +1001,12 @@
 			children = (
 				6644401519D8F781003179C1 /* DetailStatusCellFrame.h */,
 				6644401619D8F781003179C1 /* DetailStatusCellFrame.m */,
+				66AA2B7B19E524EF009CE1AE /* Comment.h */,
+				66AA2B7C19E524EF009CE1AE /* Comment.m */,
+				66AA2B8419E531CE009CE1AE /* CommentCellFrame.h */,
+				66AA2B8519E531CE009CE1AE /* CommentCellFrame.m */,
+				66AA2B8719E531EF009CE1AE /* RepostCellFrame.h */,
+				66AA2B8819E531EF009CE1AE /* RepostCellFrame.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -997,6 +1018,10 @@
 				6621A8C519D5127B000B08D0 /* DetailHeader.m */,
 				6644401819D8F7A7003179C1 /* DetailStatusCell.h */,
 				6644401919D8F7A7003179C1 /* DetailStatusCell.m */,
+				66AA2B7E19E52FCD009CE1AE /* CommentCell.h */,
+				66AA2B7F19E52FCD009CE1AE /* CommentCell.m */,
+				66AA2B8119E52FE2009CE1AE /* RepostCell.h */,
+				66AA2B8219E52FE2009CE1AE /* RepostCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1940,7 +1965,10 @@
 				66220DD419B06A6E00B80A9B /* DockItem.m in Sources */,
 				663C20FF19C9800E00AC26BF /* StatusDock.m in Sources */,
 				6639B0B319C190E3001DFB56 /* UIImage+WebP.m in Sources */,
+				66AA2B8319E52FE2009CE1AE /* RepostCell.m in Sources */,
 				6663B6B919C1612A001256DA /* HomeController.m in Sources */,
+				66AA2B8919E531EF009CE1AE /* RepostCellFrame.m in Sources */,
+				66AA2B8619E531CE009CE1AE /* CommentCellFrame.m in Sources */,
 				663C211819C9808900AC26BF /* UIView+MJExtension.m in Sources */,
 				66193E7B19C0432B00AEE357 /* HttpTool.m in Sources */,
 				66A5ADAC19AF237200BCAC34 /* main.m in Sources */,
@@ -1949,6 +1977,7 @@
 				6639B0AB19C190E3001DFB56 /* SDWebImageDecoder.m in Sources */,
 				6639B0AF19C190E3001DFB56 /* SDWebImagePrefetcher.m in Sources */,
 				663C211419C9808900AC26BF /* MJRefreshFooterView.m in Sources */,
+				66AA2B7D19E524EF009CE1AE /* Comment.m in Sources */,
 				6663B6C019C163FC001256DA /* User.m in Sources */,
 				66A5AFBD19AF264600BCAC34 /* MainController.m in Sources */,
 				66F37FFE19B19C2F0059E194 /* UIBarButtonItem+MWB.m in Sources */,
@@ -1981,6 +2010,7 @@
 				66F37FF019B15F4C0059E194 /* MessageController.m in Sources */,
 				6639B0B019C190E3001DFB56 /* UIButton+WebCache.m in Sources */,
 				663C211719C9808900AC26BF /* UIScrollView+MJRefresh.m in Sources */,
+				66AA2B8019E52FCD009CE1AE /* CommentCell.m in Sources */,
 				6644401419D8EED2003179C1 /* BaseCellFrame.m in Sources */,
 				66A5ADB019AF237200BCAC34 /* MWBAppDelegate.m in Sources */,
 				66A5AFC119AF26B700BCAC34 /* NewFeatureController.m in Sources */,

@@ -10,6 +10,7 @@
 #import "IconView.h"
 #import "ImageListView.h"
 #import "Statuse.h"
+#import "User.h"
 
 @implementation BaseCellFrame
 

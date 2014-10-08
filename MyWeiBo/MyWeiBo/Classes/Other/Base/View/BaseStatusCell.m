@@ -11,6 +11,7 @@
 #import "ImageListView.h"
 #import "Statuse.h"
 #import "BaseCellFrame.h"
+#import "User.h"
 
 @interface BaseStatusCell (){
     IconView *_headerIcon;//头像

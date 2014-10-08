@@ -80,7 +80,7 @@
 #pragma mark 显示获取最新微博数量
 -(void)showStatusCount:(NSInteger)count{
     
-    NSString *showText = count?[NSString stringWithFormat:@"%d条新微博",count]:@"没有新微薄";
+    NSString *showText = count?[NSString stringWithFormat:@"%ld条新微博",(long)count]:@"没有新微薄";
     UIButton *showBtn = [[UIButton alloc]init];
     [showBtn setTitle:showText forState:UIControlStateNormal];
     UIImage *image = [UIImage imageNamed:@"timeline_new_status_background"];

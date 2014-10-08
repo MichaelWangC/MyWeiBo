@@ -39,6 +39,14 @@
     return self;
 }
 
+-(void)setCurrentBtnType:(DetailHeaderBtnType)currentBtnType{
+    if (currentBtnType == DetailHeaderBtnTypeRepost) {
+        [self buttonChange:_repost];
+    }else{
+        [self buttonChange:_comment];
+    }
+}
+
 #pragma mark 添加界面
 -(void)addContentView{
     
@@ -52,7 +60,6 @@
     
     _comment = [[UIButton alloc]init];
     [_comment addTarget:self action:@selector(buttonChange:) forControlEvents:UIControlEventTouchUpInside];
-    _selectBtn = _comment;
     [_contentView addSubview:_comment];
     
     _attitute = [[UIButton alloc]init];
@@ -83,7 +90,6 @@
 }
 
 -(void)setStatus:(Statuse *)status{
-    _status = status;
     [self setTitleWithBtn:_repost title:@"转发" count:status.repostsCount];
     [self setTitleWithBtn:_comment title:@"评论" count:status.commentsCount];
     [self setTitleWithBtn:_attitute title:@"赞" count:status.attitudesCount];
@@ -115,6 +121,13 @@
     [UIView animateWithDuration:0.4f animations:^{
         _arrow.center = CGPointMake(_selectBtn.center.x, kDetailHeaderHeight - _arrow.frame.size.height * 0.5);
     }];
+    
+    DetailHeaderBtnType type = sender==_repost?DetailHeaderBtnTypeRepost:DetailHeaderBtnTypeComment;
+    _currentBtnType = type;
+    
+    if ([_delegate respondsToSelector:@selector(detailHeader:btnClick:)]) {
+        [_delegate detailHeader:self btnClick:type];
+    }
 }
 
 +(CGFloat)DetailHeaderHeight{

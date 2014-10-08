@@ -69,7 +69,7 @@
     if (count == 0) return;
     NSString *title;
     if (count < 10000) {
-        title = [NSString stringWithFormat:@"%d",count];
+        title = [NSString stringWithFormat:@"%ld",(long)count];
     }else{
         title = [NSString stringWithFormat:@"%.1f万",count / 10000.0];
         //字符串替换

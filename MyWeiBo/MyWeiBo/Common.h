@@ -17,6 +17,8 @@
 #define KAccessTokenUrl [KBaseUrl stringByAppendingPathComponent:@"oauth2/access_token"]
 #define KRevokeOauthUrl [KBaseUrl stringByAppendingPathComponent:@"oauth2/revokeoauth2"]
 #define KStatusesUrl [KBaseUrl stringByAppendingPathComponent:@"2/statuses/friends_timeline.json"]
+#define KRepostsUrl [KBaseUrl stringByAppendingPathComponent:@"2/statuses/repost_timeline.json"]
+#define KCommentsShowUrl [KBaseUrl stringByAppendingPathComponent:@"2/comments/show.json"]
 
 #define kDockHeight 44
 
@@ -42,7 +44,7 @@
 
 //微博正文 section头部高度
 #define kDetailHeaderHeight 45
-#define kDetailHeaderTextFont [UIFont systemFontOfSize:15]
+#define kDetailHeaderTextFont [UIFont systemFontOfSize:14]
 #define kDetailHeaderColor kColor(93, 93, 93)
 #define kDetailHeaderSelectedColor kColor(30, 30, 30)
 

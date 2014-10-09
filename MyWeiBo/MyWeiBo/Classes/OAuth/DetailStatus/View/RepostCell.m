@@ -58,7 +58,7 @@
 
 -(void)setRepostCellFrame:(RepostCellFrame *)repostCellFrame{
     
-    Statuse *statuse = repostCellFrame.statuse;
+    Statuse *statuse = (Statuse *)repostCellFrame.baseText;
     
     _headerIcon.frame = repostCellFrame.iconFrame;
     _headerIcon.user = statuse.user;

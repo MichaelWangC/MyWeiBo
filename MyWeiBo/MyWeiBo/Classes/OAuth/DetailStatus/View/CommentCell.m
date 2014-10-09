@@ -57,7 +57,7 @@
 
 -(void)setCommentCellFrame:(CommentCellFrame *)commentCellFrame{
     
-    Comment *comment = commentCellFrame.comment;
+    Comment *comment = (Comment *)commentCellFrame.baseText;
     
     _headerIcon.frame = commentCellFrame.iconFrame;
     _headerIcon.user = comment.user;

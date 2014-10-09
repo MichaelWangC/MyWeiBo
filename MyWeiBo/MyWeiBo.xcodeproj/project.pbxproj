@@ -55,6 +55,8 @@
 		663C211719C9808900AC26BF /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 663C210E19C9808900AC26BF /* UIScrollView+MJRefresh.m */; };
 		663C211819C9808900AC26BF /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 663C211019C9808900AC26BF /* UIView+MJExtension.m */; };
 		663ECBA919C958900044FA87 /* ImageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 663ECBA819C958900044FA87 /* ImageListView.m */; };
+		6642D1AD19E62EF70079210A /* BaseText.m in Sources */ = {isa = PBXBuildFile; fileRef = 6642D1AC19E62EF70079210A /* BaseText.m */; };
+		6642D1B019E632990079210A /* BaseTextFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6642D1AF19E632990079210A /* BaseTextFrame.m */; };
 		6644401119D8EE9B003179C1 /* BaseStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6644401019D8EE9B003179C1 /* BaseStatusCell.m */; };
 		6644401419D8EED2003179C1 /* BaseCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6644401319D8EED2003179C1 /* BaseCellFrame.m */; };
 		6644401719D8F781003179C1 /* DetailStatusCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6644401619D8F781003179C1 /* DetailStatusCellFrame.m */; };
@@ -437,6 +439,10 @@
 		663C211019C9808900AC26BF /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		663ECBA719C958900044FA87 /* ImageListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageListView.h; sourceTree = "<group>"; };
 		663ECBA819C958900044FA87 /* ImageListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageListView.m; sourceTree = "<group>"; };
+		6642D1AB19E62EF70079210A /* BaseText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseText.h; sourceTree = "<group>"; };
+		6642D1AC19E62EF70079210A /* BaseText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseText.m; sourceTree = "<group>"; };
+		6642D1AE19E632990079210A /* BaseTextFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextFrame.h; sourceTree = "<group>"; };
+		6642D1AF19E632990079210A /* BaseTextFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextFrame.m; sourceTree = "<group>"; };
 		6644400F19D8EE9B003179C1 /* BaseStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStatusCell.h; sourceTree = "<group>"; };
 		6644401019D8EE9B003179C1 /* BaseStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStatusCell.m; sourceTree = "<group>"; };
 		6644401219D8EED2003179C1 /* BaseCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCellFrame.h; sourceTree = "<group>"; };
@@ -950,6 +956,10 @@
 			children = (
 				6644401219D8EED2003179C1 /* BaseCellFrame.h */,
 				6644401319D8EED2003179C1 /* BaseCellFrame.m */,
+				6642D1AB19E62EF70079210A /* BaseText.h */,
+				6642D1AC19E62EF70079210A /* BaseText.m */,
+				6642D1AE19E632990079210A /* BaseTextFrame.h */,
+				6642D1AF19E632990079210A /* BaseTextFrame.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -2002,7 +2012,9 @@
 				6639B0AD19C190E3001DFB56 /* SDWebImageDownloaderOperation.m in Sources */,
 				66193E7619C03B5700AEE357 /* AFURLResponseSerialization.m in Sources */,
 				660821BB19B55CD500B0CA7C /* MoreController.m in Sources */,
+				6642D1B019E632990079210A /* BaseTextFrame.m in Sources */,
 				6639B0AA19C190E3001DFB56 /* SDWebImageCompat.m in Sources */,
+				6642D1AD19E62EF70079210A /* BaseText.m in Sources */,
 				6639B0A819C190E3001DFB56 /* NSData+ImageContentType.m in Sources */,
 				66193E7519C03B5700AEE357 /* AFURLRequestSerialization.m in Sources */,
 				660DFBBD19B44AD700B8B48E /* MWBNavigationController.m in Sources */,

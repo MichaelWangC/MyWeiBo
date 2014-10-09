@@ -65,8 +65,6 @@
 
     //先刷新表格(马上显示对应的旧数据)
     [self.tableView reloadData];
-    //滚动到转发评论组
-//    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:YES];
     
     if (index == DetailHeaderBtnTypeRepost) {
         [self loadNewRepost];
@@ -77,7 +75,7 @@
 
 #pragma mark 加载最新转发数据
 -(void)loadNewRepost{
-    long long sinceId = _repostFrames.count == 0 ? 0:((RepostCellFrame *)_repostFrames[0]).statuse.ID;
+    long long sinceId = _repostFrames.count == 0 ? 0:((RepostCellFrame *)_repostFrames[0]).baseText.ID;
     [HttpTool getWithUrl:KRepostsUrl parameters:@{
         @"access_token" : [AccessTokenTool shareAccessTokenTool].account.accessToken,
         @"id" : @(_status.ID),
@@ -88,12 +86,21 @@
         for (NSDictionary *dict in reposts) {
             Statuse *s = [[Statuse alloc]initWithDict:dict];
             RepostCellFrame *rFrame = [[RepostCellFrame alloc]init];
-            [rFrame setStatuse:s];
+            [rFrame setBaseText:s];
             [statuses addObject:rFrame];
         }
         [_repostFrames insertObjects:statuses atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)]];
-           
+        
+        //更新转发数量
+        _status.repostsCount = [responseObject[@"total_number"] integerValue];
+        
         [self.tableView reloadData];
+        
+        //滚动到转发评论组
+        if ([self currentContents].count != 0) {
+            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        }
+        
     }failure:^(NSError *error) {
            
     }];
@@ -101,7 +108,7 @@
 
 #pragma mark 加载最新评论数据
 -(void)loadNewComment{
-    long long sinceId = _commentFrames.count == 0 ? 0:((CommentCellFrame *)_commentFrames[0]).comment.ID;
+    long long sinceId = _commentFrames.count == 0 ? 0:((CommentCellFrame *)_commentFrames[0]).baseText.ID;
     [HttpTool getWithUrl:KCommentsShowUrl parameters:@{
         @"access_token" : [AccessTokenTool shareAccessTokenTool].account.accessToken,
         @"id" : @(_status.ID),
@@ -112,12 +119,21 @@
         for (NSDictionary *dict in comments) {
             Comment *c = [[Comment alloc]initWithDict:dict];
             CommentCellFrame *cFrame = [[CommentCellFrame alloc]init];
-            [cFrame setComment:c];
+            [cFrame setBaseText:c];
             [tempComments addObject:cFrame];
         }
         [_commentFrames insertObjects:tempComments atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, tempComments.count)]];
         
+        //更新评论数量
+        _status.commentsCount = [responseObject[@"total_number"] integerValue];
+        
         [self.tableView reloadData];
+        
+        //滚动到转发评论组
+        if ([self currentContents].count != 0) {
+            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        }
+        
     }failure:^(NSError *error) {
                                                            
     }];
@@ -137,10 +153,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) return _statusCellFrame.cellHeight;
-    if (_detailHeader.currentBtnType == DetailHeaderBtnTypeRepost) {
-        return ((RepostCellFrame *)_repostFrames[indexPath.row]).cellHeight;
-    }
-    return ((CommentCellFrame *)_commentFrames[indexPath.row]).cellHeight;;
+    return ((BaseTextFrame *)[self currentContents][indexPath.row]).cellHeight;;
 }
 
 #pragma mark 第section组头部控件有多高
@@ -152,7 +165,7 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if (section == 0) return nil;
-    _detailHeader.status = _statusCellFrame.statuse;
+    _detailHeader.status = _status;
     return _detailHeader;
 }
 
@@ -191,6 +204,5 @@
     }
     
 }
-
 
 @end
